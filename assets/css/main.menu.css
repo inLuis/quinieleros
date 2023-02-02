@@ -1,0 +1,42 @@
+:root{
+    --menu-dark: #000;
+    --menu-medium: teal;
+}
+body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+/* Estilos del menú principal */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--menu-medium);
+    padding: 0 24px;
+    border-bottom: 1px solid var(--menu-dark);
+}
+.menu-icon{
+    cursor: pointer;
+}
+.logo{
+    width: 100px;
+    text-align: center;
+}
+.register{
+    background-color: var(--menu-medium);
+    border: 1px solid var(--menu-dark);
+    border-radius: 5px;
+    color: var(--menu-dark);
+    height: 30px;
+    cursor: pointer;
+}
+.nav-left{
+    display: flex;
+}
+.nav-right ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
