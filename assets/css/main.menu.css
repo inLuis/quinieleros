@@ -1,6 +1,12 @@
 :root{
     --menu-dark: #000;
+    --menu-bright: white;
     --menu-medium: teal;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: o;
 }
 body{
     margin: 0;
@@ -12,31 +18,99 @@ nav{
     justify-content: space-between;
     background-color: var(--menu-medium);
     padding: 0 24px;
-    border-bottom: 1px solid var(--menu-dark);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--menu-dark);
+}
+.inactive {
+    display: none;
 }
 .menu-icon{
-    cursor: pointer;
+    display: block;
 }
 .logo{
-    width: 100px;
-    text-align: center;
-}
-.register{
-    background-color: var(--menu-medium);
-    border: 1px solid var(--menu-dark);
-    border-radius: 5px;
-    color: var(--menu-dark);
-    height: 30px;
+    font-weight: bold;
+    align-self: center;
     cursor: pointer;
+    color: var(--menu-bright);
 }
 .nav-left{
     display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+.nav-left ul {
+    display: none;
 }
 .nav-right ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     align-items: center;
     height: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-right ul li {
+    padding: 0 5px;
+}
+.nav-right ul li a {
+    text-decoration: none;
+    border: 1px solid var(--menu-bright);
+    border-radius: 6px;
+    padding: 6px;
+    color: var(--menu-bright);
+}
+.nav-right ul li a:hover {
+    font-weight: bold;
+    border: 2px solid var(--menu-bright);
+}
+.mobile-menu {
+    background-color: var(--menu-medium);
+    position: absolute;
+    top: 62px;
+    left: 0;
+    padding: 24px;
+    width: 100%;
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--menu-bright);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.mobile-menu ul li {
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--menu-bright);
+}
+@media (min-width: 650px) {
+    .menu-icon {
+        display: none;
+    }
+    .nav-left {
+        justify-content: center;
+    }
+    .nav-left ul,
+    .nav-right ul {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-left {
+        margin-left: 12px;
+    }
+    .nav-left ul li a {
+        text-decoration: none;
+        padding: 8px;
+        margin: 0 5px;
+        color: var(--menu-bright);
+    }
 }
